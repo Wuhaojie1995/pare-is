@@ -1,0 +1,1 @@
+{"version":3,"sources":["config/store.js"],"names":[],"mappings":"+GAIe,c","file":"static/js/5.74089697.chunk.js","sourcesContent":["\nclass RootStore {\n    // constructor(){}\n}\nexport default new RootStore();"],"sourceRoot":""}

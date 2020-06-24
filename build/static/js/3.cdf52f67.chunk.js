@@ -1,0 +1,2 @@
+(this.jsonpFunctionFp=this.jsonpFunctionFp||[]).push([[3],{255:function(e,t,n){"use strict";n.r(t);n(595);var r=n(614),u=n.n(r),s=n(597),i=n.n(s);i.a.defaults.timeout=18e4,i.a.defaults.withCredentials=!1,i.a.interceptors.request.use((function(e){return e}),(function(e){return Promise.reject(e)})),i.a.interceptors.response.use((function(e){return e}),(function(e){return u.a.error("\u7cfb\u7edf\u7e41\u5fd9\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5"),Promise.reject(e)})),t.default=i.a}}]);
+//# sourceMappingURL=3.cdf52f67.chunk.js.map

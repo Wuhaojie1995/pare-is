@@ -1,0 +1,13 @@
+{
+    "restart": [
+        "fp_ngx"
+    ],
+    "files": [
+        {
+            "component":"fp_ngx",
+            "action":"update",
+            "filename":"dist_zip",
+            "destfilename":"apps/dist_zip"
+        }
+    ]
+}
