@@ -1,0 +1,178 @@
+.rootIndex {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .rootIndex-content {
+        background-color: rgba(1, 1, 1, 0);
+    }
+    div {
+        display: block;
+    }
+    .rootButton {
+        z-index: 3;
+        top: 20px;
+        left: 20px;
+        position: fixed;
+        border-radius: 3px;
+        font-size: 12px;
+        text-transform: uppercase;
+        // color: #fff;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        -webkit-transition: left .3s ease;
+        transition: left .3s ease
+    }
+    .side__menu--edge {
+        z-index: 3;
+        top: 20px;
+        overflow: hidden;
+        left: -3px;
+        position: fixed;
+        border-radius: 3px;
+        width: 40px;
+        // font-size: 0;
+        // text-transform: uppercase;
+        // // color: #fff;
+        // display: -webkit-box;
+        // display: flex;
+        // -webkit-box-align: center;
+        // align-items: center;
+        // padding: 10px;
+        // cursor: pointer;
+        -webkit-transition: left .3s ease;
+        // transition: left .3s ease;
+        // background-color: #333
+    }
+    .side__main {
+        display: none;
+        opacity: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+        .side__bg,
+        .side__panel {
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            left: 0
+        }
+        .side__bg {
+            width: 100%;
+            z-index: 3;
+            -webkit-transition: background-color 1s ease;
+            transition: background-color 1s ease
+        }
+        .side__panel {
+            width: 280px;
+            overflow: auto;
+            -webkit-animation-name: bounceOutLeft;
+            animation-name: bounceOutLeft;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            z-index: 4;
+            background-color: #000
+        }
+    }
+    .side__main_show {
+        opacity: 1;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+        .side__bg,
+        .side__panel {
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            left: 0
+        }
+        .side__bg {
+            width: 100%;
+            z-index: 3;
+            background-color: rgba(0, 0, 0, .3);
+            -webkit-transition: background-color 1s ease;
+            transition: background-color 1s ease
+        }
+        .side__panel {
+            width: 280px;
+            overflow: auto;
+            -webkit-animation-name: bounceInLeft;
+            animation-name: bounceInLeft;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            z-index: 4;
+            background-color: #000
+        }
+    }
+    .ant-layout {
+        display: flex;
+        min-height: 0;
+        flex-direction: column; // position: relative;
+        box-sizing: border-box; // padding: 20px;
+        background-color: rgba(1, 1, 1, 0);
+        .ant-layout-header {
+            height: 40px;
+            padding: 10px;
+            line-height: 25px;
+            background: #001529;
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                .cat {
+                    height: 18px;
+                    width: 1px;
+                    display: inline-block;
+                    background-color: #4e4e4e;
+                    margin: 0 8px;
+                }
+                .header-tagname {
+                    font-size: 16px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    @keyframes bounceInLeft {
+        0% {
+            -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            opacity: 1;
+        }
+    }
+    @keyframes bounceOutLeft {
+        20% {
+            opacity: 1;
+            -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: translate3d(-2000px, 0, 0);
+            transform: translate3d(-2000px, 0, 0);
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.loginDIv {
+    width: 100%;
+    min-height: 900px;
+    position: relative;
+    background-color: rgba(1,1,1,0);
+    // background-color: #ffffff;
+    .loginText {
+        position: absolute;
+        top: 12%;
+        left: 25%;
+        height: 600px;
+        width: 900px;
+        background: url('./images/2984493c.signin-background.png') no-repeat 50%;
+        background-size: 100% 100%;
+        background-color: rgba(255, 255, 255, 0.75);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        .loginText-left{
+            width: 30%;
+            height: 100%;
+            margin-left: 15%;
+            margin-top: 20%;
+            .InputContent-text {
+                width: 300px;
+                margin: 0px auto;
+                margin-top: 30px;
+                height: 55px;
+            }
+            .InputContent {
+                width: 300px;
+                margin: 0px auto;
+                margin-top: 20px;
+                height: 55px;
+                Button {
+                    height: 35px;
+                    width: 300px;
+                }
+            }
+            .InputContent-Checkbox {
+                width: 300px;
+                margin: 0px auto;
+                height: 30px;
+            }
+        }
+      
+    }
+    .loginText:before {
+        background-color: rgba(1,1,1,0);
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+        content: '';
+        top: 102%;
+        left: 5%;
+        height: 15px;
+        width: 90%; // opacity: 0;
+        background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 80%);
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 80%);
+        /* W3C */
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform, opacity;
+        transition-property: transform, opacity;
+    }
+}
