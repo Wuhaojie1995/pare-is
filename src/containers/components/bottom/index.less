@@ -1,0 +1,26 @@
+.indexBottom {
+    font-size: 12px;
+    height: 100px;
+    padding: 20px 0; // background-color: rgba(12, 11, 11, 0.418);
+    background-color: #232323;
+    color: #888;
+    margin-top: 200px;
+    line-height: 24px;
+    text-align: center;
+    .wrapper {
+        position: relative;
+        max-width: 892px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .wrapper:after {
+        background: url(./image//footer.png) no-repeat 50%/cover;
+        position: absolute;
+        bottom: 62px;
+        left: -64px;
+        width: 1040px;
+        pointer-events: none;
+        content: "";
+        height: 315px;
+    }
+}

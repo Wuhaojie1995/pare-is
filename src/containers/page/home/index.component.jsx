@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.less';
 import { DownOutlined } from '@ant-design/icons';
+import { IndexBottom } from '@coms/index';
 const data = [
     {
         title: 'Java 提取和删除照片图片 Exif GPS 等隐私信息',
@@ -46,8 +47,10 @@ class RootComponent extends React.Component {
         });
     }
     taskSalePlanAndActual = () => {
+        console.log(document.documentElement.scrollTop, this.state.offsetHeight);
 
-        if (document.documentElement.scrollTop == this.state.offsetHeight) {
+
+        if (document.documentElement.scrollTop >= this.state.offsetHeight) {
             clearInterval(this.salePlanAndActualTimer);
 
         } else {
@@ -77,6 +80,7 @@ class RootComponent extends React.Component {
                 <div className='home-one'>
                     {this.renderMapDiv(data)}
                 </div>
+                <IndexBottom />
             </div>
         );
     }
