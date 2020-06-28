@@ -1,6 +1,5 @@
 .indexBottom {
-    font-size: 12px;
-    height: 100px;
+    font-size: 12px; // height: 100px;
     padding: 20px 0; // background-color: rgba(12, 11, 11, 0.418);
     background-color: #232323;
     color: #888;
@@ -12,6 +11,16 @@
         max-width: 892px;
         margin: 0 auto;
         padding: 0 10px;
+        div {
+            span {
+                font-size: 15px;
+                line-height: 25px;
+            }
+            .HeartFilled{
+                -webkit-animation: beating 1s infinite;
+                animation: beating 1s infinite;
+            }
+        }
     }
     .wrapper:after {
         background: url(./image//footer.png) no-repeat 50%/cover;
@@ -22,5 +31,30 @@
         pointer-events: none;
         content: "";
         height: 315px;
+    }
+
+  
+    @keyframes beating {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        20% {
+            -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+        }
+        30% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+        }
+        70%,
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
     }
 }
